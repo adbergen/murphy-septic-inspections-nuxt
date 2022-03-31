@@ -28,16 +28,17 @@
       </v-btn>
     </v-app-bar> -->
 
-    <v-toolbar dense color="white" height="90px">
-      <v-row>
+    <!-- Navbar -->
+    <v-app-bar color="white" height="80px" app>
+      <v-row align="center" justify="center">
         <v-col cols="2" class="pa-none">
           <NuxtLink to="/about">
-            <v-img src="./headerLogo.png" width="300px" />
+            <v-img src="./headerLogo.png" width="1000px" />
           </NuxtLink>
         </v-col>
         <v-col class="d-flex justify-space-around">
           <v-toolbar-title class="white--text"
-            ><v-tabs v-model="tab">
+            ><v-tabs color="green" v-model="tab">
               <v-tab to="/">Home</v-tab>
               <v-tab to="/about">About</v-tab>
               <v-tab to="/services">Services</v-tab>
@@ -47,33 +48,21 @@
         </v-col>
         <v-col cols="2" class="d-flex justify-end">
           <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-            <v-icon>mdi-facebook</v-icon>
+            <v-icon color="black">mdi-facebook</v-icon>
           </v-btn>
-          <v-btn icon @click.stop="rightDrawer = !rightDrawer">
+          <v-btn color="black" icon @click.stop="rightDrawer = !rightDrawer">
             <v-icon>mdi-instagram</v-icon>
           </v-btn>
-          <v-btn icon @click.stop="rightDrawer = !rightDrawer">
+          <v-btn color="black" icon @click.stop="rightDrawer = !rightDrawer">
             <v-icon>mdi-linkedin</v-icon>
           </v-btn>
         </v-col>
       </v-row>
-    </v-toolbar>
-
-    <!-- navigation links --->
-    <!-- <div class="d-flex flex-row">
-          <router-link
-            v-for="(menuItem, index) in menuItems"
-            :key="index"
-            :to="menuItem.route"
-            >{{ menuItem.text }}</router-link
-          >
-        </div> -->
+    </v-app-bar>
 
     <!-- Nuxt Main View Container -->
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
 
     <!-- Right Side Drawer -->
@@ -89,7 +78,7 @@
     </v-navigation-drawer>
 
     <!-- Footer -->
-    <v-footer :absolute="!fixed" app>
+    <v-footer class="grey darken-4 white--text"   height="395">
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
