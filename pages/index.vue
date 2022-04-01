@@ -43,7 +43,15 @@
                   @blur="$v.phone.$touch()"
                 ></v-text-field>
 
-                <v-btn dark block color="green" class="mr-4 mt-2" @click="submit"> submit </v-btn>
+                <v-btn
+                  dark
+                  block
+                  color="green"
+                  class="mr-4 mt-2"
+                  @click="submit"
+                >
+                  submit
+                </v-btn>
               </form>
               <div class="text-center pt-4 text-body-1 px-10">
                 Our team will be in touch as soon as possible to discuss your
@@ -55,182 +63,153 @@
       </v-parallax>
     </section>
 
-    <section>
-      <v-parallax height="380">
-        <v-layout column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">
-            Endorfine is a social network that allows everyone to reach a huge
-            audience with a tap
-          </div>
-          <em
-            >With the power of Endorfine you don't need to be famous or post
-            pics of cute cats in order to get visibility</em
-          >
-          <v-btn class="blue lighten-2 mt-5" large href="/pre-made-themes">
-            Get more info
-          </v-btn>
-        </v-layout>
-      </v-parallax>
+    <section class="px-16">
+      <v-row>
+        <v-col class="text-h4 green--text" align="center" cols="12">
+          Looking for a Septic Inspector?
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 black--text pa-16">
+              We perform residential septic system inspections for current
+              homeowners and prospective real estate purchasers. An onsite
+              wastewater treatment and disposal system, or what is more commonly
+              referred to as a Septic System, may be the most expensive single
+              component of your home. Therefore, if you want to save yourself
+              some trouble in the future it's crucial that you know its
+              condition and routinely have it checked. <br /><br />
+
+              Getting a septic inspection provides you with information about
+              the septic system components and their current operating
+              conditions. Local municipalities and New Jersey state regulations
+              require a professional residen-
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 black--text pa-16">
+              tial septic system inspection before completion. Murphy's
+              certified and licensed inspectors will inspect your residential
+              septic system thoroughly and make the process quick and painless.
+              <br />
+              <br />
+              Our inspections typically take about 3 hours though it is
+              important to note every system is different and finding the
+              components, exposing them, and dealing with any issues that may
+              arise can take varied amounts of time. Your residential septic
+              inspection report can be ready within 24 hours. We do not perform
+              repairs in an effort to prevent conflict of interest in that area.
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </section>
 
     <!-- Three Card Section -->
-    <section>
-      <v-layout column wrap class="my-3" align-center>
-        <v-row>
-          <div class="text-xs-center">
-            <div class="headline text-h3">Looking for a Septic Inspector?</div>
-          </div>
-        </v-row>
-        <v-flex xs12>
-          <v-container grid-list-xl>
-            <v-layout row wrap align-center>
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-img
-                    class="white--text align-end"
-                    height="200px"
-                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                  >
-                  </v-img>
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
-                      >public</v-icon
-                    >
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-xs-center">Reach the world</div>
-                  </v-card-title>
-                  <v-card-text>
-                    Show your stuff to the whole community of Endorfine not only
-                    to your mum or your friends. We love making good content
-                    viral. In this moment Endorfine is used by artists who are
-                    not famous but that want to share their works to the world.
-                    Unfortunately with other social networks this is hard, slow
-                    and sometime expensive.
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
-                      >flash_on</v-icon
-                    >
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline">Fast feedback</div>
-                  </v-card-title>
-                  <v-card-text>
-                    Time is important, we don't want you to waste it. Here you
-                    can get a massive feedback from real users in minutes. And
-                    if your stuff is appreciated you won't only get positive
-                    feedback but also lovely and sincere fans
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
-                      >share</v-icon
-                    >
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-xs-center">
-                      Create new connections
-                    </div>
-                  </v-card-title>
-                  <v-card-text>
-                    Imagine if you can directly speak with the world's
-                    population. Don't you think it would be easier to find nice
-                    people to interact with? Endorfine is both local and global
-                    and help you to connect without limitations with people from
-                    your city, your state and your universe!
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-flex>
-      </v-layout>
+    <section class="pa-16 green">
+      <v-row class="pa-16">
+        <v-col cols="4">
+          <v-card class="mx-5 text-center">
+            <v-img class="white--text align-end" src="./HomeownersCard.png" />
+            <v-card-text
+              style="transform: translateY(-50%)"
+              class="text-center pb-0"
+            >
+              <v-avatar color="green">
+                <v-icon dark> mdi-information </v-icon>
+              </v-avatar>
+            </v-card-text>
+            <v-card-title class="justify-center text-h5 pt-0 pb-10">
+              About Murphy's
+            </v-card-title>
+            <v-card-text class="black--text text-body-1">
+              Complete system inspections are done for several reasons and we
+              perform residential septic system inspections for both current
+              homeowners and prospective real estate purchasers.
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="4">
+          <v-card class="mx-5 text-center">
+            <v-img class="white--text align-end" src="./AboutCard.png" />
+            <v-card-text
+              style="transform: translateY(-50%)"
+              class="text-center pb-0"
+            >
+              <v-avatar color="green">
+                <v-icon dark> mdi-home </v-icon>
+              </v-avatar>
+            </v-card-text>
+            <v-card-title class="justify-center text-h5 pt-0 pb-10">
+              Services
+            </v-card-title>
+            <v-card-text class="black--text text-body-1">
+              An onsite wastewater treatment and disposal system, or Septic
+              System, may be the most expensive single component of your home.
+              For home sellers, a pre-listing inspection can ensure that there
+              are no surprises once their home is put on the market.
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="4">
+          <v-card class="mx-5 text-center">
+            <v-img class="white--text align-end" src="./ContactCard.png" />
+            <v-card-text
+              style="transform: translateY(-50%)"
+              class="text-center pb-0"
+            >
+              <v-avatar color="green">
+                <v-icon dark> mdi-phone </v-icon>
+              </v-avatar>
+            </v-card-text>
+            <v-card-title class="justify-center text-h5 pt-0 pb-10">
+              Contact
+            </v-card-title>
+            <v-card-text class="black--text text-body-1">
+              Feel confident choosing Murphy's Septic Inspections. Buying or
+              selling, we do not offer any type of septic repair work so you do
+              not have to worry about Murphy's finding problems that don't
+              exist.
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </section>
 
-    <section>
-      <v-container grid-list-md>
-        <v-layout row wrap>
-          <v-flex xs12 text-xs-center class="mt-5">
-            <div class="headline">Are you amazed? Stay tuned!</div>
-            <br />
-            <div>
-              We are lunching the beta in a few time. If you want to be one of
-              the first Endorfine users we will email you as soon as we're
-              ready. In the beginning only few people will test before the
-              launch. Let us know how Endorfine will help you!
-            </div>
-          </v-flex>
-          <v-flex xs8 offset-xs2> </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
-
-    <section>
-      <v-parallax height="380">
-        <v-layout column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">
-            We are dropping cool news and opportunities on socials
-          </div>
-        </v-layout>
-        <v-layout justify-space-around justify-center>
-          <v-icon x-large dark>fab fa-facebook-f</v-icon>
-
-          <v-icon x-large dark>fab fa-twitter</v-icon>
-
-          <v-icon x-large dark>fab fa-reddit-alien</v-icon>
-
-          <v-icon x-large dark>fab fa-instagram</v-icon>
-
-          <v-icon x-large dark>fab fa-discord</v-icon>
-        </v-layout>
-      </v-parallax>
-    </section>
-
-    <section>
-      <v-container grid-list-xl>
-        <v-layout row wrap justify-center class="my-5">
-          <v-flex xs12 sm4>
-            <v-card class="elevation-0 transparent">
-              <v-card-title primary-title class="layout justify-center">
-                <div class="headline">Company info</div>
-              </v-card-title>
-              <v-card-text>
-                We are not a company. We hate companies. Just imagine us like
-                the guys from the Silicon Valley series.
-              </v-card-text>
-            </v-card>
-          </v-flex>
-          <v-flex xs12 sm4 offset-sm1>
-            <v-card class="elevation-0 transparent">
-              <v-card-title primary-title class="layout justify-center">
-                <div class="headline">We are hiring</div>
-              </v-card-title>
-              <v-card-text>
-                Are you a creative person? Do you like techy stuff? Complete the
-                email form by writing your skills and interests
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
-
-    <section>
-      <v-container>
-        <v-layout>
-          <v-flex xs12 class="text-xs-center">
-            <img height="200px" />
-          </v-flex>
-        </v-layout>
-      </v-container>
+    <section class="px-16">
+      <v-row>
+        <v-col class="text-h4 green--text pt-16" align="center" cols="12">
+          Areas Served
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 black--text pa-16">
+              Atlantic, Bergen, Burlington, Camden, Cape May, Cumberland, Essex,
+              Gloucester, Hudson, Hunterdon, Mercer, Middlesex, Monmouth,
+              Morris, Ocean, Passaic, Salem, Somerset, Sussex, Union, & Warren
+              Counties
+            </v-card-text>
+            <v-card-text>
+              With over 5 years of experience in residential septic system
+              inspection, Murphy's Septic Inspection goes above and beyond to
+              make your residential inspection quick and easy. Our friendly and
+              knowledgable inspectors follow the reporting standards of the NJ
+              DEP. We are happy to offer recommendations on advanced services
+              and have access to a network of industry professionals who can
+              help prolong your system's life. Schedule your free consultation
+              today with one of our friendly inspectors.
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 black--text pa-16">
+              <v-img width="50%" src="./NewJerseyCounties.png" />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </section>
   </v-app>
 </template>

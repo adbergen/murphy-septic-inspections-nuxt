@@ -97,7 +97,7 @@
             <v-tab to="/contact">Contact</v-tab>
           </v-tabs>
         </v-col>
-        <v-col cols="4" align="center" class="pt-7">
+        <v-col cols="4" align="center" class="pt-10">
           <v-card flat color="grey darken-4">
             <v-img src="./footerLogo.png" height="135px" width="260px" />
             <v-btn
@@ -112,7 +112,7 @@
           </v-card>
         </v-col>
         <v-col
-          class="d-flex justify-center align-center"
+          class="d-flex justify-center align-center pt-8"
           align="center"
           cols="4"
         >
