@@ -43,7 +43,7 @@
                   @blur="$v.phone.$touch()"
                 ></v-text-field>
 
-                <v-btn class="mr-4 mt-2" @click="submit"> submit </v-btn>
+                <v-btn dark block color="green" class="mr-4 mt-2" @click="submit"> submit </v-btn>
               </form>
               <div class="text-center pt-4 text-body-1 px-10">
                 Our team will be in touch as soon as possible to discuss your
@@ -56,6 +56,25 @@
     </section>
 
     <section>
+      <v-parallax height="380">
+        <v-layout column align-center justify-center>
+          <div class="headline white--text mb-3 text-xs-center">
+            Endorfine is a social network that allows everyone to reach a huge
+            audience with a tap
+          </div>
+          <em
+            >With the power of Endorfine you don't need to be famous or post
+            pics of cute cats in order to get visibility</em
+          >
+          <v-btn class="blue lighten-2 mt-5" large href="/pre-made-themes">
+            Get more info
+          </v-btn>
+        </v-layout>
+      </v-parallax>
+    </section>
+
+    <!-- Three Card Section -->
+    <section>
       <v-layout column wrap class="my-3" align-center>
         <v-row>
           <div class="text-xs-center">
@@ -67,6 +86,12 @@
             <v-layout row wrap align-center>
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
+                  <v-img
+                    class="white--text align-end"
+                    height="200px"
+                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                  >
+                  </v-img>
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="blue--text text--lighten-2"
                       >public</v-icon
@@ -128,24 +153,6 @@
           </v-container>
         </v-flex>
       </v-layout>
-    </section>
-
-    <section>
-      <v-parallax height="380">
-        <v-layout column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">
-            Endorfine is a social network that allows everyone to reach a huge
-            audience with a tap
-          </div>
-          <em
-            >With the power of Endorfine you don't need to be famous or post
-            pics of cute cats in order to get visibility</em
-          >
-          <v-btn class="blue lighten-2 mt-5" large href="/pre-made-themes">
-            Get more info
-          </v-btn>
-        </v-layout>
-      </v-parallax>
     </section>
 
     <section>

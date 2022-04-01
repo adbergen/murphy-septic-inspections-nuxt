@@ -47,14 +47,10 @@
           >
         </v-col>
         <v-col cols="2" class="d-flex justify-end">
-          <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-            <v-icon color="black">mdi-facebook</v-icon>
-          </v-btn>
-          <v-btn color="black" icon @click.stop="rightDrawer = !rightDrawer">
-            <v-icon>mdi-instagram</v-icon>
-          </v-btn>
-          <v-btn color="black" icon @click.stop="rightDrawer = !rightDrawer">
-            <v-icon>mdi-linkedin</v-icon>
+          <v-btn v-for="icon in icons" :key="icon" icon color="black">
+            <v-icon size="24px">
+              {{ icon }}
+            </v-icon>
           </v-btn>
         </v-col>
       </v-row>
@@ -78,8 +74,110 @@
     </v-navigation-drawer>
 
     <!-- Footer -->
-    <v-footer class="grey darken-4 white--text"   height="395">
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    
+    <v-footer color="grey" class="grey darken-4 white--text" height="395">
+      <v-row>
+        <v-col
+          class="d-flex justify-center align-center"
+          align="center"
+          cols="4"
+        >
+          <v-tabs
+            dark
+            background-color="grey darken-4"
+            class=""
+            color="green"
+            hide-slider
+            v-model="tab"
+            vertical
+          >
+            <v-tab to="/">Home</v-tab>
+            <v-tab to="/about">About</v-tab>
+            <v-tab to="/services">Services</v-tab>
+            <v-tab to="/contact">Contact</v-tab>
+          </v-tabs>
+        </v-col>
+        <v-col cols="4" align="center" class="pt-7">
+          <v-card flat color="grey darken-4">
+            <v-img src="./footerLogo.png" height="135px" width="260px" />
+            <v-btn
+              to="/contact"
+              color="white"
+              class="mt-7"
+              rounded
+              outlined
+              label="yes"
+              >Book a Consultation</v-btn
+            >
+          </v-card>
+        </v-col>
+        <v-col
+          class="d-flex justify-center align-center"
+          align="center"
+          cols="4"
+        >
+          <v-card flat color="grey darken-4">
+            <v-list color="grey darken-4" dark two-line>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="green"> mdi-phone </v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-content>
+                  <v-list-item-title>(555) 555-5555</v-list-item-title>
+                  <v-list-item-subtitle>Phone</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+
+              <v-divider inset></v-divider>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="green"> mdi-email </v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-content>
+                  <v-list-item-title>info@murphysepticinspections.com</v-list-item-title>
+                  <v-list-item-subtitle>Email</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+
+              <v-divider inset></v-divider>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="green"> mdi-map-marker </v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-content>
+                  <v-list-item-title>1400 Main Street</v-list-item-title>
+                  <v-list-item-subtitle>Jackson, NJ 08527</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+        <v-col cols="12" class="text-center text-body-1"
+          ><v-card dark flat color="grey darken-4"
+            ><span>
+              <v-card-text>
+                <v-btn
+                  v-for="icon in icons"
+                  :key="icon"
+                  class="mx-4 white--text"
+                  icon
+                >
+                  <v-icon size="35px">
+                    {{ icon }}
+                  </v-icon>
+                </v-btn>
+              </v-card-text>
+              &copy; Murphy Septic Inspections LLC
+              {{ new Date().getFullYear() }}</span
+            ></v-card
+          ></v-col
+        >
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -90,6 +188,7 @@ export default {
   data() {
     return {
       tab: 'null',
+      icons: ['mdi-facebook', 'mdi-linkedin', 'mdi-instagram'],
       clipped: false,
       drawer: false,
       fixed: false,
