@@ -65,7 +65,7 @@
 
     <section class="px-16">
       <v-row>
-        <v-col class="text-h4 green--text" align="center" cols="12">
+        <v-col class="text-h4 green--text pt-0" align="center" cols="12">
           Looking for a Septic Inspector?
         </v-col>
         <v-col cols="6">
@@ -107,8 +107,11 @@
     </section>
 
     <!-- Three Card Section -->
-    <section class="pa-16 green">
-      <v-row class="pa-16">
+    <section class="px-16 pb-16 green">
+      <v-row class="px-16 pb-10">
+        <v-col class="text-h4 white--text py-16" align="center" cols="12">
+          Who We Are
+        </v-col>
         <v-col cols="4">
           <v-card class="mx-5 text-center">
             <v-img class="white--text align-end" src="./HomeownersCard.png" />
@@ -116,17 +119,18 @@
               style="transform: translateY(-50%)"
               class="text-center pb-0"
             >
-              <v-avatar color="green">
-                <v-icon dark> mdi-information </v-icon>
+              <v-avatar size="60px" color="green">
+                <v-icon size="30px" dark> mdi-information </v-icon>
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
               About Murphy's
             </v-card-title>
             <v-card-text class="black--text text-body-1">
-              Complete system inspections are done for several reasons and we
-              perform residential septic system inspections for both current
-              homeowners and prospective real estate purchasers.
+              Complete septic system inspections are done for several reasons.
+              We have an unparalleled commitment to excellence while providing
+              quality service to a wide array of customers that include the
+              residential, commercial and industrial sectors.
             </v-card-text>
           </v-card>
         </v-col>
@@ -137,8 +141,8 @@
               style="transform: translateY(-50%)"
               class="text-center pb-0"
             >
-              <v-avatar color="green">
-                <v-icon dark> mdi-home </v-icon>
+              <v-avatar size="60px" color="green">
+                <v-icon size="30px" dark> mdi-hammer-screwdriver </v-icon>
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
@@ -146,9 +150,9 @@
             </v-card-title>
             <v-card-text class="black--text text-body-1">
               An onsite wastewater treatment and disposal system, or Septic
-              System, may be the most expensive single component of your home.
-              For home sellers, a pre-listing inspection can ensure that there
-              are no surprises once their home is put on the market.
+              System, may be the most expensive component of your home. For home
+              sellers, a pre-listing inspection can ensure that there are no
+              surprises once the home is put on the market.
             </v-card-text>
           </v-card>
         </v-col>
@@ -159,8 +163,8 @@
               style="transform: translateY(-50%)"
               class="text-center pb-0"
             >
-              <v-avatar color="green">
-                <v-icon dark> mdi-phone </v-icon>
+              <v-avatar size="60px" color="green">
+                <v-icon size="30px" dark> mdi-phone </v-icon>
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
@@ -170,7 +174,8 @@
               Feel confident choosing Murphy's Septic Inspections. Buying or
               selling, we do not offer any type of septic repair work so you do
               not have to worry about Murphy's finding problems that don't
-              exist.
+              exist. Don't hesitate to reach out to us regarding any questions
+              or concerns.
             </v-card-text>
           </v-card>
         </v-col>
@@ -178,19 +183,20 @@
     </section>
 
     <section class="px-16">
-      <v-row>
+      <v-row class="px-16">
         <v-col class="text-h4 green--text pt-16" align="center" cols="12">
           Areas Served
         </v-col>
         <v-col cols="6">
           <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 black--text pa-16">
+            <v-card-text class="text-h5 green--text text-center pa-16">
               Atlantic, Bergen, Burlington, Camden, Cape May, Cumberland, Essex,
               Gloucester, Hudson, Hunterdon, Mercer, Middlesex, Monmouth,
               Morris, Ocean, Passaic, Salem, Somerset, Sussex, Union, & Warren
               Counties
             </v-card-text>
-            <v-card-text>
+            <v-divider class="mb-10" inset />
+            <v-card-text class="black--text text-center text-body-1">
               With over 5 years of experience in residential septic system
               inspection, Murphy's Septic Inspection goes above and beyond to
               make your residential inspection quick and easy. Our friendly and
@@ -202,10 +208,46 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="6">
+        <v-col align="center" cols="6">
           <v-card class="elevation-0 transparent px-16">
             <v-card-text class="text-body-1 black--text pa-16">
               <v-img width="50%" src="./NewJerseyCounties.png" />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </section>
+
+    <section class="px-16 green pt-10 white--text">
+      <v-row>
+        <v-col class="text-h4" align="center" cols="12">
+          Need a Home Septic Inspection? <br />
+          Murphy's Can Be There!
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 white--text pa-16">
+              Murphy Septic Inspection, LLC is a member of the National
+              Association of Wastewater Technicians or NAWT. All of our septic
+              inspections are performed in strict conformance to the NAWT’s
+              Inspection Standards by certified NAWT inspectors. Due to these
+              high standards, these specifications have been described by many
+              as the Industry Standard for an on-lot residential septic system
+              inspection in New Jersey and around the nation.
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="6">
+          <v-card class="elevation-0 transparent px-16">
+            <v-card-text class="text-body-1 white--text pa-16">
+              A comprehensive septic inspection provides you with valuable
+              information about the present condition of the system, however, it
+              is important to note that it is not a warranty that guarantees
+              that the system will function properly for any period in the
+              future. All of our expert residential septic system inspectors are
+              highly trained and certified to inspect, identify problems and
+              provide solutions. Reach out to see why Murphy is the right
+              choice.
             </v-card-text>
           </v-card>
         </v-col>

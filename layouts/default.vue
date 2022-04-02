@@ -47,8 +47,14 @@
           >
         </v-col>
         <v-col cols="2" class="d-flex justify-end">
-          <v-btn v-for="icon in icons" :key="icon" icon color="black">
-            <v-icon size="24px">
+          <v-btn
+            lg
+            v-for="icon in icons"
+            :key="icon"
+            icon
+            color="grey darken-4"
+          >
+            <v-icon size="30px">
               {{ icon }}
             </v-icon>
           </v-btn>
@@ -74,7 +80,7 @@
     </v-navigation-drawer>
 
     <!-- Footer -->
-    
+
     <v-footer color="grey" class="grey darken-4 white--text" height="395">
       <v-row>
         <v-col
@@ -137,7 +143,9 @@
                 </v-list-item-icon>
 
                 <v-list-item-content>
-                  <v-list-item-title>info@murphysepticinspections.com</v-list-item-title>
+                  <v-list-item-title
+                    >info@murphysepticinspections.com</v-list-item-title
+                  >
                   <v-list-item-subtitle>Email</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
