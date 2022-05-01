@@ -1314,13 +1314,6 @@
     webpack-node-externals "^3.0.0"
     webpackbar "^4.0.0"
 
-"@nuxtjs/google-analytics@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz#3bb9f398a05cc23340d1f423f8d8653dc4114f46"
-  integrity sha512-rDQTwHIjyjVrx8GywHPuWykJ3jRFGaHl5Iqji/y8tQWUc0yGEeHxOoR0yimzxnTS1Ph2/PubQYpgnVeEPEdL/A==
-  dependencies:
-    vue-analytics "^5.22.1"
-
 "@nuxtjs/google-gtag@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@nuxtjs/google-gtag/-/google-gtag-1.0.4.tgz#57562d8ec4c7694573e77edf72097da4a34b0d68"
@@ -2662,10 +2655,10 @@ core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.19.3:
-  version "3.21.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
-  integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
+core-js@^3.22.3:
+  version "3.22.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.22.3.tgz#498c41d997654cb00e81c7a54b44f0ab21ab01d5"
+  integrity sha512-1t+2a/d2lppW1gkLXx3pKPVGbBdxXAkqztvWb1EJ8oF8O2gIGiytzflNiFEehYwVK/t2ryUsGBoOFFvNx95mbg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -7706,11 +7699,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
-
-vue-analytics@^5.22.1:
-  version "5.22.1"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.22.1.tgz#9d6b32da56daee1b9dfb23a267b50349a03f710f"
-  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
 
 vue-client-only@^2.0.0:
   version "2.1.0"
