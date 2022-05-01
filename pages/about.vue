@@ -17,7 +17,7 @@
     <section>
       <v-row>
         <v-col cols="6">
-          <v-img src="./WhyCard.png" />
+          <v-img src="./aboutImage.webp" />
         </v-col>
         <v-col cols="6">
           <v-card class="elevation-0 transparent pa-16">
