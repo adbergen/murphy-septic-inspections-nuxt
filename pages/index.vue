@@ -81,20 +81,21 @@
 
               Getting a septic inspection provides you with information about
               the septic system components and their current operating
-              conditions. Local municipalities and New Jersey state regulations
-              require a professional residen-
+              conditions.
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="6">
           <v-card class="elevation-0 transparent px-16">
             <v-card-text class="text-body-1 black--text pa-16">
-              tial septic system inspection before completion. Murphy's
-              certified and licensed inspectors will inspect your residential
-              septic system thoroughly and make the process quick and painless.
+              Some local municipalities and New Jersey state regulations require
+              a professional residential septic system inspection before
+              completion. Murphy's certified and licensed inspectors will
+              inspect your residential septic system thoroughly and make the
+              process quick and painless.
               <br />
               <br />
-              Our inspections typically take about 3 hours though it is
+              Our inspections typically take about 2 hours though it is
               important to note every system is different and finding the
               components, exposing them, and dealing with any issues that may
               arise can take varied amounts of time. Your residential septic
@@ -124,7 +125,7 @@
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
-              About Murphy's
+              Homeowners/Sellers
             </v-card-title>
             <v-card-text class="black--text text-body-1">
               Complete septic system inspections are done for several reasons.
@@ -136,7 +137,7 @@
         </v-col>
         <v-col cols="4">
           <v-card class="mx-5 text-center">
-            <v-img class="white--text align-end" src="./AboutCard.png" />
+            <v-img class="white--text align-end" src="./middleCard.webp" />
             <v-card-text
               style="transform: translateY(-50%)"
               class="text-center pb-0"
@@ -146,7 +147,7 @@
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
-              Services
+              Buyers
             </v-card-title>
             <v-card-text class="black--text text-body-1">
               An onsite wastewater treatment and disposal system, or Septic
@@ -168,7 +169,7 @@
               </v-avatar>
             </v-card-text>
             <v-card-title class="justify-center text-h5 pt-0 pb-10">
-              Contact
+              No Conflict of Interest
             </v-card-title>
             <v-card-text class="black--text text-body-1">
               Feel confident choosing Murphy's Septic Inspections. Buying or
@@ -311,8 +312,4 @@ export default {
   text-shadow: 2px 2px #000000;
 }
 
-.social-icon {
-  font-size: 21px;
-  color: white;
-}
 </style>

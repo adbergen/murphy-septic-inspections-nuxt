@@ -1,20 +1,22 @@
 import colors from 'vuetify/es5/util/colors'
-
+const main_base_URL = 'https://www.murphysepticinspect.com';
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  sitemap: {
+    hostname: main_base_URL
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - murphy-septic-inspections-nuxt',
-    title: 'murphy-septic-inspections',
+    title: 'Murphy Septic Inspections',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'A septic inspection website' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -27,7 +29,7 @@ export default {
     height: '5px'
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vuelidate'],
+  plugins: ['~/plugins/vuelidate', '~/plugins/gtag'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,10 +38,11 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/sitemap'],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
