@@ -3,7 +3,14 @@
     <section>
       <v-parallax src="./LandingBackground.png" height="780">
         <v-row align="center">
-          <v-col cols="8" class="text-center pb-16">
+          <v-col
+            cols="12"
+            sm="8"
+            md="8"
+            lg="8"
+            xl="8"
+            class="text-center pb-0 pb-sm-16 pb-md-16 pb-lg-16 pb-xl-16"
+          >
             <h2 class="headline text-h2 pb-4 black--text font-weight-bold">
               Septic System Inspections
             </h2>
@@ -12,7 +19,15 @@
             </span>
           </v-col>
           <!-- Contact Form -->
-          <v-col cols="4" class="pa-16">
+          <v-col
+            v-if="!$vuetify.breakpoint.mobile"
+            cols="12"
+            sm="4"
+            md="4"
+            lg="4"
+            xl="4"
+            class="pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+          >
             <v-card class="pb-10 pt-4 px-5">
               <v-card-title class="green--text font-weight-bold text-h5 pb-8"
                 >Request a callback</v-card-title
@@ -63,14 +78,26 @@
       </v-parallax>
     </section>
 
-    <section class="px-16">
+    <section class="px-0 px-sm-16 px-md-16 px-lg-16 px-xl-16">
       <v-row>
-        <v-col class="text-h4 green--text pt-0" align="center" cols="12">
+        <v-col
+          class="text-h4 green--text pt-0"
+          align="center"
+          cols="12"
+          sm="12"
+          md="12"
+          lg="12"
+          xl="12"
+        >
           Looking for a Septic Inspector?
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 black--text pa-16">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent px-10 px-sm-16 px-md-16 px-lg-16 px-xl-16"
+          >
+            <v-card-text
+              class="text-body-1 black--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+            >
               We perform residential septic system inspections for current
               homeowners and prospective real estate purchasers. An onsite
               wastewater treatment and disposal system, or what is more commonly
@@ -85,9 +112,13 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 black--text pa-16">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent pb-10 px-10 px-sm-16 px-md-16 px-lg-16 px-xl-16"
+          >
+            <v-card-text
+              class="text-body-1 black--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+            >
               Some local municipalities and New Jersey state regulations require
               a professional residential septic system inspection before
               completion. Murphy's certified and licensed inspectors will
@@ -108,13 +139,21 @@
     </section>
 
     <!-- Three Card Section -->
-    <section class="px-16 pb-16 green">
-      <v-row class="px-16 pb-10">
-        <v-col class="text-h4 white--text py-16" align="center" cols="12">
+    <section class="px-5 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16 green">
+      <v-row class="px-5 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-10">
+        <v-col
+          class="text-h4 white--text py-16"
+          align="center"
+          cols="12"
+          sm="12"
+          md="12"
+          lg="12"
+          xl="12"
+        >
           Who We Are
         </v-col>
-        <v-col cols="4">
-          <v-card class="mx-5 text-center">
+        <v-col cols="12" sm="4" md="4" lg="4" xl="4">
+          <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
             <v-img class="white--text align-end" src="./HomeownersCard.png" />
             <v-card-text
               style="transform: translateY(-50%)"
@@ -135,8 +174,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="4">
-          <v-card class="mx-5 text-center">
+        <v-col cols="12" sm="4" md="4" lg="4" xl="4">
+          <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
             <v-img class="white--text align-end" src="./middleCard.webp" />
             <v-card-text
               style="transform: translateY(-50%)"
@@ -157,8 +196,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="4">
-          <v-card class="mx-5 text-center">
+        <v-col cols="12" sm="4" md="4" lg="4" xl="4">
+          <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
             <v-img class="white--text align-end" src="./ContactCard.png" />
             <v-card-text
               style="transform: translateY(-50%)"
@@ -183,13 +222,15 @@
       </v-row>
     </section>
 
-    <section class="px-16">
-      <v-row class="px-16">
+    <section class="px-5 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16">
+      <v-row class="px-5 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16">
         <v-col class="text-h4 green--text pt-16" align="center" cols="12">
           Areas Served
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent px-16">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent px-0 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16"
+          >
             <v-card-text class="text-h5 green--text text-center pa-16">
               Atlantic, Bergen, Burlington, Camden, Cape May, Cumberland, Essex,
               Gloucester, Hudson, Hunterdon, Mercer, Middlesex, Monmouth,
@@ -209,9 +250,13 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col align="center" cols="6">
-          <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 black--text pa-16">
+        <v-col align="center" cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent px-0 px-sm-16 px-md-16 px-lg-16 px-xl-16"
+          >
+            <v-card-text
+              class="text-body-1 black--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+            >
               <v-img width="50%" src="./NewJerseyCounties.png" />
             </v-card-text>
           </v-card>
@@ -219,15 +264,21 @@
       </v-row>
     </section>
 
-    <section class="px-16 green pt-10 white--text">
+    <section
+      class="px-0 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16 green pt-10 white--text"
+    >
       <v-row>
         <v-col class="text-h4" align="center" cols="12">
           Need a Home Septic Inspection? <br />
           Murphy's Can Be There!
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 white--text pa-16">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent px-10 px-sm-16 px-md-16 px-lg-16 px-xl-16 pb-16"
+          >
+            <v-card-text
+              class="text-body-1 white--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+            >
               Murphy Septic Inspection, LLC is a member of the National
               Association of Wastewater Technicians or NAWT. All of our septic
               inspections are performed in strict conformance to the NAWT’s
@@ -238,9 +289,13 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent px-16">
-            <v-card-text class="text-body-1 white--text pa-16">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            class="elevation-0 transparent px-10 px-sm-16 px-md-16 px-lg-16 px-xl-16"
+          >
+            <v-card-text
+              class="text-body-1 white--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+            >
               A comprehensive septic inspection provides you with valuable
               information about the present condition of the system, however, it
               is important to note that it is not a warranty that guarantees
@@ -311,5 +366,4 @@ export default {
   font-weight: 900;
   text-shadow: 2px 2px #000000;
 }
-
 </style>

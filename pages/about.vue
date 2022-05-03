@@ -15,13 +15,16 @@
     </section>
 
     <section>
-      <v-row>
-        <v-col cols="6">
-          <v-img src="./aboutImage.webp" />
+      <v-row align="center" justify="center">
+        <v-col cols="12" sm="12" md="12" lg="6" xl="6">
+          <v-img class="ma-16" src="./aboutImage.webp" />
         </v-col>
-        <v-col cols="6">
-          <v-card class="elevation-0 transparent pa-16">
-            <v-card-title class="text-h4 green--text pt-10">
+        <v-col cols="12" sm="12" md="12" lg="6" xl="6">
+          <v-card class="elevation-0 transparent px-16 pb-16">
+            <v-card-title
+              class="text-h4 green--text"
+              style="word-break: break-word"
+            >
               Meet your Septic Inspector
             </v-card-title>
             <v-card-text class="text-body-1 black--text">

@@ -57,9 +57,9 @@
                   </v-list-item-icon>
 
                   <v-list-item-content>
-                    <v-list-item-title>1400 Main Street</v-list-item-title>
+                    <v-list-item-title>PO BOX 827</v-list-item-title>
                     <v-list-item-subtitle
-                      >Jackson, NJ 08527</v-list-item-subtitle
+                      >Ocean Gate, NJ 08740</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
