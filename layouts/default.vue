@@ -9,7 +9,7 @@
     >
       <v-row align="center" justify="center">
         <v-col cols="2" class="pa-none">
-          <NuxtLink to="/about">
+          <NuxtLink to="/">
             <v-img src="./headerLogo.png" width="1000px" />
           </NuxtLink>
         </v-col>
@@ -41,8 +41,8 @@
     </v-app-bar>
 
     <!-- Mobile Nav -->
-    <v-app-bar color="white" height="80px" app v-else>
-      <NuxtLink to="/about">
+    <v-app-bar v-else color="white" height="80px" app>
+      <NuxtLink to="/">
         <v-img src="./headerLogo.png" width="200px" />
       </NuxtLink>
       <v-spacer />
@@ -94,45 +94,48 @@
             </v-list-item>
           </NuxtLink>
         </v-list-item-group>
-        <v-divider></v-divider>
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon color="green"> mdi-phone </v-icon>
-          </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>(555) 555-5555</v-list-item-title>
-            <v-list-item-subtitle>Phone</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+        <div style="position: absolute; bottom: 0">
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="green"> mdi-phone </v-icon>
+            </v-list-item-icon>
 
-        <v-divider inset></v-divider>
+            <v-list-item-content>
+              <v-list-item-title>(555) 555-5555</v-list-item-title>
+              <v-list-item-subtitle>Phone</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
 
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon color="green"> mdi-email </v-icon>
-          </v-list-item-icon>
+          <v-divider inset></v-divider>
 
-          <v-list-item-content>
-            <v-list-item-title
-              >info@murphysepticinspections.com</v-list-item-title
-            >
-            <v-list-item-subtitle>Email</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="green"> mdi-email </v-icon>
+            </v-list-item-icon>
 
-        <v-divider inset></v-divider>
+            <v-list-item-content>
+              <v-list-item-title
+                >info@murphysepticinspections.com</v-list-item-title
+              >
+              <v-list-item-subtitle>Email</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
 
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon color="green"> mdi-map-marker </v-icon>
-          </v-list-item-icon>
+          <v-divider inset></v-divider>
 
-          <v-list-item-content>
-            <v-list-item-title>PO BOX 827</v-list-item-title>
-            <v-list-item-subtitle>Ocean Gate, NJ 08740</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="green"> mdi-map-marker </v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>PO BOX 827</v-list-item-title>
+              <v-list-item-subtitle>Ocean Gate, NJ 08740</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </div>
       </v-list>
     </v-navigation-drawer>
 

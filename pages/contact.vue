@@ -14,12 +14,19 @@
       </v-parallax>
     </section>
 
-    <section>
+    <section >
       <v-row>
-        <v-col cols="4" class="pl-16 pt-16">
-          <div class="pl-16">
-            <v-card class="px-10">
-              <v-card-title class="text-h4 green--text pt-10">
+        <v-col
+          cols="12"
+          sm="4"
+          md="4"
+          lg="4"
+          xl="4"
+          class="pl-5 pl-sm-16 pl-md-16 pl-lg-16 pl-xl-16 pt-10 pt-sm-16 pt-md-16 pt-lg-16 pt-xl-16 pr-5"
+        >
+          <div class="pl-0 pl-sm-16 pl-md-16 pl-lg-16 pl-xl-16">
+            <v-card class="px-10 px-sm-10 px-md-10 px-lg-10 px-xl-10">
+              <v-card-title class="text-h4 green--text pt-5 pt-sm-10 pt-md-10 pt-lg-10 pt-xl-10">
                 <v-img src="./HeaderLogo.png" />
               </v-card-title>
               <v-list two-line>
@@ -67,11 +74,12 @@
             </v-card>
           </div>
         </v-col>
-        <v-col cols="8" class="pa-16">
-          <div class="px-16">
+        <v-col cols="12" sm="8" md="8" lg="8" xl="8" class="pa-5 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16">
+          <div class="px-0 px-sm-10 px-md-10 px-lg-10 px-xl-10">
             <v-card class="pb-10 pt-4 px-5">
               <v-card-title
                 class="green--text font-weight-bold text-center justify-center text-h4 pb-8"
+                style="word-break: break-word"
                 >Send us a message</v-card-title
               >
               <form class="px-12">

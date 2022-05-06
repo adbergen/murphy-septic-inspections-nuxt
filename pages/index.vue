@@ -318,7 +318,6 @@ import { required, email } from 'vuelidate/lib/validators'
 
 export default {
   mixins: [validationMixin],
-
   validations: {
     name: { required },
     email: { required, email },
