@@ -1,7 +1,11 @@
 <template>
   <div light>
     <section>
-      <v-parallax src="./GreenBanner.png" height="200">
+      <v-parallax
+        src="./GreenBanner.png"
+        alt="Green Pipes Header Image"
+        height="200"
+      >
         <v-row align="center">
           <v-col cols="12" class="text-center">
             <h2
@@ -14,7 +18,7 @@
       </v-parallax>
     </section>
 
-    <section >
+    <section>
       <v-row>
         <v-col
           cols="12"
@@ -26,8 +30,13 @@
         >
           <div class="pl-0 pl-sm-16 pl-md-16 pl-lg-16 pl-xl-16">
             <v-card class="px-10 px-sm-10 px-md-10 px-lg-10 px-xl-10">
-              <v-card-title class="text-h4 green--text pt-5 pt-sm-10 pt-md-10 pt-lg-10 pt-xl-10">
-                <v-img src="./HeaderLogo.png" />
+              <v-card-title
+                class="text-h4 green--text pt-5 pt-sm-10 pt-md-10 pt-lg-10 pt-xl-10"
+              >
+                <v-img
+                  src="./HeaderLogo.png"
+                  alt="Murphy Septic Inspections Logo"
+                />
               </v-card-title>
               <v-list two-line>
                 <v-list-item>
@@ -74,7 +83,14 @@
             </v-card>
           </div>
         </v-col>
-        <v-col cols="12" sm="8" md="8" lg="8" xl="8" class="pa-5 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16">
+        <v-col
+          cols="12"
+          sm="8"
+          md="8"
+          lg="8"
+          xl="8"
+          class="pa-5 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
+        >
           <div class="px-0 px-sm-10 px-md-10 px-lg-10 px-xl-10">
             <v-card class="pb-10 pt-4 px-5">
               <v-card-title
@@ -114,22 +130,26 @@
                   v-model="message"
                   :error-messages="messageErrors"
                   outlined
-                  name="input-7-4"
                   label="Message"
                   required
-                  @input="$v.phone.$touch()"
-                  @blur="$v.phone.$touch()"
+                  @input="$v.message.$touch()"
+                  @blur="$v.message.$touch()"
                 ></v-textarea>
-
                 <v-btn
                   dark
                   block
                   color="green"
                   class="mr-4 mt-2"
-                  @click="submit"
+                  @click.prevent="submit(name, email, phone, message)"
                 >
                   submit
                 </v-btn>
+                <v-alert v-if="successAlert" class="mt-5" type="success">
+                  Thanks for filling out our form!
+                </v-alert>
+                <v-alert v-if="errorAlert" class="mt-5" type="error">
+                  Please fix the errors above before submitting!
+                </v-alert>
               </form>
               <div class="text-center pt-4 text-body-1 px-10">
                 Our team will be in touch as soon as possible to discuss your
@@ -150,7 +170,6 @@ import { required, email } from 'vuelidate/lib/validators'
 export default {
   name: 'contact',
   mixins: [validationMixin],
-
   validations: {
     name: { required },
     email: { required, email },
@@ -163,6 +182,8 @@ export default {
     email: '',
     phone: '',
     message: '',
+    successAlert: false,
+    errorAlert: false,
   }),
 
   computed: {
@@ -185,7 +206,7 @@ export default {
       !this.$v.phone.required && errors.push('Phone number is required')
       return errors
     },
-    phoneErrors() {
+    messageErrors() {
       const errors = []
       if (!this.$v.message.$dirty) return errors
       !this.$v.message.required && errors.push('Message is required')
@@ -193,9 +214,61 @@ export default {
     },
   },
 
+  async mounted() {
+    // Initialize recaptcha instance
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log(e)
+    }
+  },
+
   methods: {
-    submit() {
+    async submit(name, email, phone, message) {
       this.$v.$touch()
+      try {
+        // Start the verification process
+        const response = await this.verifyCaptcha()
+
+        // Display error message if verification was not successful
+        if (!response.success || this.$v.$error) {
+          this.$recaptcha.reset()
+          this.errorAlert = true
+          return
+        }
+        // Otherwise Submit form
+        this.errorAlert = false
+        this.$fire.database
+          .ref('users')
+          .push()
+          .set({
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+          })
+          .then((this.successAlert = true))
+          .finally(
+            setTimeout(() => {
+              this.successAlert = false
+            }, 5000)
+          )
+        this.$recaptcha.reset()
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async verifyCaptcha() {
+      try {
+        const token = await this.$recaptcha.execute()
+        const response = await this.$axios.$post(
+          `/captcha-api/siteverify?secret=${process.env.SECRET_KEY}&response=${token}`
+        )
+        console.log(response)
+        return response
+      } catch (error) {
+        return error
+      }
     },
   },
 }

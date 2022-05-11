@@ -1,7 +1,11 @@
 <template>
   <v-app light>
     <section>
-      <v-parallax src="./LandingBackground.png" height="780">
+      <v-parallax
+        src="./landing.jpeg"
+        alt="Bathroom Landing Header Image"
+        height="780"
+      >
         <v-row align="center">
           <v-col
             cols="12"
@@ -11,12 +15,12 @@
             xl="8"
             class="text-center pb-0 pb-sm-16 pb-md-16 pb-lg-16 pb-xl-16"
           >
-            <h2 class="headline text-h2 pb-4 black--text font-weight-bold">
+            <h1 class="headline text-h2 pb-4 black--text font-weight-bold">
               Septic System Inspections
-            </h2>
-            <span class="text-h4 font-weight-bold subheading green--text">
+            </h1>
+            <h2 class="text-h4 font-weight-bold subheading green--text">
               Serving All of New Jersey
-            </span>
+            </h2>
           </v-col>
           <!-- Contact Form -->
           <v-col
@@ -63,10 +67,16 @@
                   block
                   color="green"
                   class="mr-4 mt-2"
-                  @click="submit"
+                  @click.prevent="submit(name, email, phone)"
                 >
                   submit
                 </v-btn>
+                <v-alert v-if="successAlert" class="mt-5" type="success">
+                  Thanks for filling out our form!
+                </v-alert>
+                <v-alert v-if="errorAlert" class="mt-5" type="error">
+                  Please fix the errors above before submitting!
+                </v-alert>
               </form>
               <div class="text-center pt-4 text-body-1 px-10">
                 Our team will be in touch as soon as possible to discuss your
@@ -154,7 +164,11 @@
         </v-col>
         <v-col cols="12" sm="4" md="4" lg="4" xl="4">
           <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
-            <v-img class="white--text align-end" src="./HomeownersCard.png" />
+            <v-img
+              class="white--text align-end"
+              src="./HomeownersCard.png"
+              alt="House"
+            />
             <v-card-text
               style="transform: translateY(-50%)"
               class="text-center pb-0"
@@ -170,13 +184,17 @@
               Complete septic system inspections are done for several reasons.
               We have an unparalleled commitment to excellence while providing
               quality service to a wide array of customers that include the
-              residential, commercial and industrial sectors.
+              residential, commercial, and industrial sectors.
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="12" sm="4" md="4" lg="4" xl="4">
           <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
-            <v-img class="white--text align-end" src="./middleCard.webp" />
+            <v-img
+              class="white--text align-end"
+              src="./middleCard.webp"
+              alt="House"
+            />
             <v-card-text
               style="transform: translateY(-50%)"
               class="text-center pb-0"
@@ -198,7 +216,11 @@
         </v-col>
         <v-col cols="12" sm="4" md="4" lg="4" xl="4">
           <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
-            <v-img class="white--text align-end" src="./ContactCard.png" />
+            <v-img
+              class="white--text align-end"
+              src="./ContactCard.png"
+              alt="House"
+            />
             <v-card-text
               style="transform: translateY(-50%)"
               class="text-center pb-0"
@@ -237,13 +259,13 @@
               Morris, Ocean, Passaic, Salem, Somerset, Sussex, Union, & Warren
               Counties
             </v-card-text>
-            <v-divider class="mb-10" inset />
+            <v-divider class="mb-10" />
             <v-card-text class="black--text text-center text-body-1">
               With over 5 years of experience in residential septic system
               inspection, Murphy's Septic Inspection goes above and beyond to
               make your residential inspection quick and easy. Our friendly and
               knowledgable inspectors follow the reporting standards of the NJ
-              DEP. We are happy to offer recommendations on advanced services
+              DEP. We are happy to offer accurate and unbiased recommendations on advanced services
               and have access to a network of industry professionals who can
               help prolong your system's life. Schedule your free consultation
               today with one of our friendly inspectors.
@@ -257,7 +279,11 @@
             <v-card-text
               class="text-body-1 black--text pa-0 pa-sm-16 pa-md-16 pa-lg-16 pa-xl-16"
             >
-              <v-img width="50%" src="./NewJerseyCounties.png" />
+              <v-img
+                width="50%"
+                src="./NewJerseyCounties.png"
+                alt="New Jersey"
+              />
             </v-card-text>
           </v-card>
         </v-col>
@@ -328,6 +354,8 @@ export default {
     name: '',
     email: '',
     phone: '',
+    successAlert: false,
+    errorAlert: false,
   }),
 
   computed: {
@@ -351,18 +379,34 @@ export default {
       return errors
     },
   },
-
   methods: {
-    submit() {
+    async submit(name, email, phone) {
       this.$v.$touch()
+      try {
+        if (!this.$v.$error) {
+          this.errorAlert = false
+          this.$fire.database
+            .ref('users')
+            .push()
+            .set({
+              name: name,
+              email: email,
+              phone: phone,
+            })
+            .then((this.successAlert = true))
+            .finally(
+              setTimeout(() => {
+                this.successAlert = false
+              }, 5000)
+            )
+        } else {
+          // handle error case
+          this.errorAlert = true
+        }
+      } catch (err) {
+        // handle errors
+      }
     },
   },
 }
 </script>
-
-<style scoped>
-.finedTitle {
-  font-weight: 900;
-  text-shadow: 2px 2px #000000;
-}
-</style>

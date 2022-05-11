@@ -1,7 +1,11 @@
 <template>
   <div light>
     <section>
-      <v-parallax src="./GreenBanner.png" height="200">
+      <v-parallax
+        src="./GreenBanner.png"
+        alt="Green Pipes Header Image"
+        height="200"
+      >
         <v-row align="center">
           <v-col cols="12" class="text-center">
             <h2

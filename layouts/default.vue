@@ -10,7 +10,11 @@
       <v-row align="center" justify="center">
         <v-col cols="2" class="pa-none">
           <NuxtLink to="/">
-            <v-img src="./headerLogo.png" width="1000px" />
+            <v-img
+              src="./headerLogo.png"
+              alt="Murphy Septic Inspections Logo"
+              width="1000px"
+            />
           </NuxtLink>
         </v-col>
         <v-col class="d-flex justify-space-around">
@@ -43,7 +47,11 @@
     <!-- Mobile Nav -->
     <v-app-bar v-else color="white" height="80px" app>
       <NuxtLink to="/">
-        <v-img src="./headerLogo.png" width="200px" />
+        <v-img
+          src="./headerLogo.png"
+          alt="Murphy Septic Inspections Logo"
+          width="200px"
+        />
       </NuxtLink>
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
@@ -179,7 +187,12 @@
         >
           <!-- Footer Logo -->
           <v-card flat color="grey darken-4">
-            <v-img src="./footerLogo.png" height="135px" width="260px" />
+            <v-img
+              src="./footerLogo.png"
+              alt="Murphy Septic Inspections Logo"
+              height="135px"
+              width="260px"
+            />
             <v-btn
               to="/contact"
               color="white"

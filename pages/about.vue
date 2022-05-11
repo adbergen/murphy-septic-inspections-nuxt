@@ -1,7 +1,11 @@
 <template>
   <div light>
     <section>
-      <v-parallax src="./GreenBanner.png" height="200">
+      <v-parallax
+        src="./GreenBanner.png"
+        alt="Green Pipes Header Image"
+        height="200"
+      >
         <v-row align="center">
           <v-col cols="12" class="text-center">
             <h2
@@ -17,7 +21,11 @@
     <section>
       <v-row align="center" justify="center">
         <v-col cols="12" sm="12" md="12" lg="6" xl="6">
-          <v-img class="ma-16" src="./aboutImage.webp" />
+          <v-img
+            class="ma-16"
+            src="./aboutImage.webp"
+            alt="Septic Inspection Overview"
+          />
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="6" xl="6">
           <v-card class="elevation-0 transparent px-16 pb-16">

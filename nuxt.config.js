@@ -1,22 +1,27 @@
 import colors from 'vuetify/es5/util/colors'
-const main_base_URL = 'https://www.murphysepticinspect.com';
+require('dotenv').config()
+const main_base_URL = 'https://www.murphysepticinspect.com'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   sitemap: {
-    hostname: main_base_URL
+    hostname: main_base_URL,
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - murphy-septic-inspections-nuxt',
-    title: 'Murphy Septic Inspections',
+    title: 'Murphy Septic Inspections | Accurate & Unbiased',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A septic inspection website' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Our certified and licensed septic inspectors provide fast and accurate septic inspections in New Jersey. Inspection reports available within 1 day.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -26,7 +31,7 @@ export default {
   css: [],
   loading: {
     color: 'blue',
-    height: '5px'
+    height: '5px',
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/vuelidate', '~/plugins/gtag'],
@@ -38,11 +43,29 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/sitemap'],
+  modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/firebase',
+    '@nuxtjs/dotenv',
+  ],
+  firebase: {
+    config: {
+      apiKey: process.env.apiKey,
+      authDomain: process.env.authDomain,
+      projectId: process.env.projectId,
+      storageBucket: process.env.storageBucket,
+      messagingSenderId: process.env.messagingSenderId,
+      appId: process.env.appId,
+      measurementId: process.env.measurementId,
+    },
+    services: {
+      database: true, // Just as example. Can be any other service.
+    },
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
