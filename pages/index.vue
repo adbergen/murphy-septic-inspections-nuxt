@@ -160,7 +160,7 @@
           lg="12"
           xl="12"
         >
-          Who We Are
+          Our Customers
         </v-col>
         <v-col cols="12" sm="4" md="4" lg="4" xl="4">
           <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
@@ -181,17 +181,17 @@
               Homeowners/Sellers
             </v-card-title>
             <v-card-text class="black--text text-body-1">
-              Complete septic system inspections are done for several reasons.
-              We have an unparalleled commitment to excellence while providing
-              quality service to a wide array of customers that include the
-              residential, commercial, and industrial sectors.
+              An onsite wastewater treatment and disposal system, or Septic
+              System, may be the most expensive component of your home. For home
+              sellers, a pre-listing inspection can ensure that there are no
+              surprises once the home is put on the market.
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="12" sm="4" md="4" lg="4" xl="4">
           <v-card class="mx-0 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5 text-center">
             <v-img
-              class="white--text align-end"
+              class="white--text align-end pb-10"
               src="./middleCard.webp"
               alt="House"
             />
@@ -207,10 +207,10 @@
               Buyers
             </v-card-title>
             <v-card-text class="black--text text-body-1">
-              An onsite wastewater treatment and disposal system, or Septic
-              System, may be the most expensive component of your home. For home
-              sellers, a pre-listing inspection can ensure that there are no
-              surprises once the home is put on the market.
+              Buying a home is one of the biggest investments you will make, so
+              you want to avoid any surprises after you purchase the home.
+             
+              For new prospective buyers and/or investors, inspection results can help you decide if the home is right for you.
             </v-card-text>
           </v-card>
         </v-col>
@@ -265,10 +265,10 @@
               inspection, Murphy's Septic Inspection goes above and beyond to
               make your residential inspection quick and easy. Our friendly and
               knowledgable inspectors follow the reporting standards of the NJ
-              DEP. We are happy to offer accurate and unbiased recommendations on advanced services
-              and have access to a network of industry professionals who can
-              help prolong your system's life. Schedule your free consultation
-              today with one of our friendly inspectors.
+              DEP. We are happy to offer accurate and unbiased recommendations
+              on advanced services and have access to a network of industry
+              professionals who can help prolong your system's life. Schedule
+              your free consultation today with one of our friendly inspectors.
             </v-card-text>
           </v-card>
         </v-col>

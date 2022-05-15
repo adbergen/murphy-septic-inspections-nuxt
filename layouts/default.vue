@@ -111,7 +111,7 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>(555) 555-5555</v-list-item-title>
+              <v-list-item-title>(732) 300-4610</v-list-item-title>
               <v-list-item-subtitle>Phone</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
@@ -125,7 +125,7 @@
 
             <v-list-item-content>
               <v-list-item-title
-                >info@murphysepticinspections.com</v-list-item-title
+                >murphysepticinspect@gmail.com</v-list-item-title
               >
               <v-list-item-subtitle>Email</v-list-item-subtitle>
             </v-list-item-content>
@@ -223,7 +223,7 @@
                 </v-list-item-icon>
 
                 <v-list-item-content>
-                  <v-list-item-title>(555) 555-5555</v-list-item-title>
+                  <v-list-item-title>(732) 300-4610</v-list-item-title>
                   <v-list-item-subtitle>Phone</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -237,7 +237,7 @@
 
                 <v-list-item-content>
                   <v-list-item-title
-                    >info@murphysepticinspections.com</v-list-item-title
+                    >murphysepticinspect@gmail.com</v-list-item-title
                   >
                   <v-list-item-subtitle>Email</v-list-item-subtitle>
                 </v-list-item-content>
